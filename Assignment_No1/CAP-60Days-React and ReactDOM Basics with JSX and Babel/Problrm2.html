@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>JSX and Babel</title>
+</head>
+
+<body>
+    <div id="root"></div>
+</body>
+<script src="https://unpkg.com/react@18.2.0/umd/react.production.min.js"></script>
+<script src="https://unpkg.com/react-dom@18.2.0/umd/react-dom.production.min.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<script type="text/babel">
+    // Your JSX code here
+    //       Simple JSX Element
+    // // Objective: Create a paragraph (<p>) element using JSX to display the text "Seize the day".
+    // // Requirements:
+    // // Use the provided boilerplate HTML code.
+    // // Inside the <script> tag, create a JSX element representing a paragraph.
+    // // Render this element inside the div with the id root.
+    let root = document.querySelector('#root')
+    let element = <p>"Seize the day".</p>
+    ReactDOM.createRoot(root).render(element)
+
+
+    // Dynamic Content in JSX
+    // Objective: Enhance the paragraph element to include dynamic content.
+    // Requirements:
+    // Define a JavaScript variable with the text "Seize the day".
+    // Use this variable within your JSX to set the content of the paragraph.
+    // Render the paragraph inside the div with the id root.
+
+    const str = <p>"Seize the day kfjkjf".</p>
+    let para = <div>{str}</div>
+    ReactDOM.createRoot(root).render(para)
+
+    //         Conditional Rendering in JSX
+    // Objective: Implement conditional rendering within your JSX element.
+    // Requirements:
+    // Create a JavaScript variable that holds a boolean value.
+    // Use this variable to conditionally render one of two paragraphs, based on the boolean's value.
+    // Ensure the correct paragraph is rendered inside the div with the id root.
+
+    let isFirst = true;
+    let ele = isFirst ? <p>I am Avdhut</p> : <p>I am Not Avdhut</p>;
+    ReactDOM.createRoot(root).render(ele);
+</script>
+</html>
